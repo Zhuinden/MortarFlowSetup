@@ -11,7 +11,7 @@ import mortar.utils.ViewScope;
 public class HelloModule {
     @Provides
     @ViewScope
-    public HelloPresenter cameraPresenter() {
+    public HelloPresenter helloPresenter() {
         return new HelloPresenter();
     }
 }
