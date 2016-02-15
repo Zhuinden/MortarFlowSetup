@@ -37,6 +37,7 @@ public class HelloPath
         if(helloComponent == null) {
             helloComponent = DaggerHelloComponent.builder().applicationComponent(InjectorService.obtain()).build();
             helloComponent.inject(this);
+            helloComponent.inject(helloPresenter);
         }
         return helloComponent;
     }
