@@ -1,4 +1,4 @@
-# MortarFlowSetup
+# [DEPRECATED] MortarFlowSetup
 
 DEPRECATED in favor of https://github.com/Zhuinden/flowless
 
