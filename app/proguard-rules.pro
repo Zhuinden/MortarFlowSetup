@@ -94,6 +94,17 @@
 
 -keep class epgmiab.domain.data.** { *; }
 
+ # GSON TypeAdapterFactory is an interface, we need to keep the entire class, not just its members
+ -keep,includedescriptorclasses class * implements com.google.gson.TypeAdapterFactory
+ # GSON JsonDeserializer and JsonSerializer are interfaces, we need to keep the entire class, not just its members
+ -keep,includedescriptorclasses class * implements com.google.gson.JsonDeserializer
+ -keep,includedescriptorclasses class * implements com.google.gson.JsonSerializer
+ # Ensure that all fields annotated with SerializedName will be kept
+ -keepclassmembers class * {
+     @com.google.gson.annotations.SerializedName <fields>;
+ }
+
+
 #spongycastle
 -keep class org.spongycastle.** {*; }
 
